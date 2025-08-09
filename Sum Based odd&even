@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int evenelem = 0;
+        int oddelem = 0;
+        int evenind = 0;
+        int oddind = 0;
+        int arr[] = new int[n];
+
+        for(int i=0;i<n;i++){
+          arr[i] = sc.nextInt();
+          if(i%2==0)
+             evenind+=arr[i];
+         else
+             oddind+=arr[i];
+         
+          if(arr[i]%2==0)
+             evenelem+=arr[i];
+          else
+             oddelem+=arr[i];
+       }
+       System.out.println(evenelem+" "+oddelem+" "+evenind+" "+oddind);
+    }
+}
