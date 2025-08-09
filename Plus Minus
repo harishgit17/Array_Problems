@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class PlusMinus{
+    public static void main (String[] args){
+      Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+
+        double count=0,coun=0,cou=0;
+        
+
+        for(int i=0;i<n;i++){
+          arr[i]=sc.nextInt();
+
+         if(arr[i]>0){
+             count++;
+          }
+         else if(arr[i]<0){
+             coun++;
+          }
+         else{
+             cou++;
+         }
+       }
+       double pos = count/n;
+       double neg = coun/n;
+       double zero = cou/n;
+
+       System.out.printf("%.6f\n",pos); 
+       System.out.printf("%.6f\n",neg); 
+       System.out.printf("%.6f\n",zero); 
+    }
+ }
